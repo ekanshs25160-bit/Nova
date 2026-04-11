@@ -1,5 +1,3 @@
-const API_KEY = "AOYylflEuHvji089I1SDt62Q0nnfonVP";
-
 
 async function fetchData() {
   const query = document.getElementById("search-input").value;
@@ -9,10 +7,10 @@ async function fetchData() {
   container.innerHTML = "Loading...";
 
   try {
-    const url = `https://api.shodan.io/shodan/host/${query}?key=${API_KEY}`;
-    const proxy = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
-
-    const res = await fetch(proxy);
+    // Calling our local backend API instead of Shodan directly or via proxy
+    const url = `http://localhost:3000/api/search?q=${encodeURIComponent(query)}`;
+    
+    const res = await fetch(url);
     const data = await res.json();
 
     displayData(data);
