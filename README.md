@@ -1,17 +1,27 @@
-# Project Name: Nova
+# Meal Explorer
 
-## Project Description
-This project is a frontend-based data exploration dashboard inspired by the Shodan API that enables users to search, filter, and analyze publicly available information about internet-exposed devices. It provides an interactive interface where users can query device data using keywords such as services, ports, or locations, and view structured results including IP address, organization, and geographic details. The application includes features like dynamic filtering, sorting, and interactive elements to enhance usability, along with a dark/light mode for improved user experience.
+Meal Explorer is a vibrant and modern single-page web application designed for discovering culinary delights from around the world. It provides users with an intuitive interface to browse, search, and view detailed information about hundreds of recipes.
+
 
 ## Features
-- **Search functionality**: Quickly find specific data using a search bar.
-- **Filtering options**: Narrow down results based on various criteria.
-- **Sorting capability**: Sort results by different attributes.
-- **Interactive UI elements**: View details or favorite items with ease.
+
+- **Search Capabilities**: Instantly search for recipes by name.
+- **Category Filtering**: Browse meals by specific categories (e.g., Beef, Chicken, Seafood, Vegan).
+- **Sorting**: Toggle alphabetical sorting (A-Z or Z-A) to easily locate your favorite dishes.
+- **Detailed Recipe Modals**: Click on any meal to see a beautifully presented popup containing:
+  - An image of the finished dish
+  - A categorized list of specific ingredients and measurements
+  - Step-by-step cooking instructions
+  - Links to YouTube video tutorials (when available)
+- **Responsive Design**: Polished, modern UI with smooth animations and hover effects, looking great on desktop and mobile.
+
+## API Integration
+
+This project is powered by **[TheMealDB API](https://www.themealdb.com/api.php)**. 
+It uses several free endpoints provided by TheMealDB to fetch real-time recipe data:
+- `categories.php` - for retrieving meal categories
+- `search.php?s=` - for querying meals by name
+- `filter.php?c=` - for filtering meals by category
+- `lookup.php?i=` - for fetching comprehensive details of a specific meal by ID
 
 
-## Project Structure
-- `index.html`: Main HTML file for the application.
-- `css/`: Contains all stylesheets for the project.
-- `js/`: Contains JavaScript files for functionality.
-- `server/`: Conatins backend for Shodan API
