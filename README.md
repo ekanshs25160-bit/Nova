@@ -8,10 +8,10 @@ This project is a frontend-based data exploration dashboard inspired by the Shod
 - **Filtering options**: Narrow down results based on various criteria.
 - **Sorting capability**: Sort results by different attributes.
 - **Interactive UI elements**: View details or favorite items with ease.
-- **Dark/Light mode toggle**: Switch between themes for user comfort.
+
 
 ## Project Structure
 - `index.html`: Main HTML file for the application.
 - `css/`: Contains all stylesheets for the project.
 - `js/`: Contains JavaScript files for functionality.
-- `data.json`: Contains API data as json
+- `server/`: Conatins backend for Shodan API
