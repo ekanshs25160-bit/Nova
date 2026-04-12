@@ -26,8 +26,7 @@ async function fetchData() {
   container.innerHTML = "Loading...";
 
   try {
-    // Calling our local backend API instead of Shodan directly or via proxy
-    const url = `http://localhost:3000/api/search?q=${encodeURIComponent(query)}`;
+    const url = `/api/search?q=${encodeURIComponent(query)}`;
     
     const res = await fetch(url);
     const data = await res.json();
