@@ -49,18 +49,46 @@ body {
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    margin: 20px;
+    margin: 30px 40px;
+}
+.navbar .nav-actions {
+    grid-column: 3;
+    justify-self: end;
 }
 
 .search-container{
-    margin-top: 25vh;
+    margin-top: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.filter-container select {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    color: var(--text-primary);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.filter-container select:hover,
+.filter-container select:focus {
+    border-color: var(--accent);
+    outline: none;
 }
 
 .search-container input{
@@ -92,6 +120,16 @@ body {
 }
 
 .navbar .logo{
-    font-size: 2rem;
-    
+    font-size: 1.5rem;
+    grid-column: 2;
+    text-align: center;
+    padding: 30px 0;
+}
+.navbar .logo h1 {
+    margin: 0;
+}
+.navbar .logo h3 {
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
 }

@@ -13,13 +13,27 @@
             <h1>Nova</h1>
             <h3>Data Intelligence Dashboard</h3>
         </div>
+
         <div class="nav-actions">
-            <button id="theme-toggle">🌓 Toggle Mode</button>
         </div>
     </nav>
     <div class="search-container">
         <input type="text" id="search-input" placeholder="Search IP, Port, or Org (e.g., 80, Apache, Google)...">
         <button id="search-btn">Analyze</button>
+    </div>
+
+    <div class="filter-container">
+        <select id="country-filter">
+          <option value="">All Countries</option>
+        </select>
+
+        <select id="org-filter">
+          <option value="">All Organizations</option>
+        </select>
+
+        <select id="port-filter">
+          <option value="">All Ports</option>
+        </select>
     </div>
 
     <main class="container">
